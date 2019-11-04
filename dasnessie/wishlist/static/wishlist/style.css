@@ -1,0 +1,107 @@
+:root {
+    --highlight-color: #1e1f63;
+    --background-color: #cbc1ff;
+    --main-color: black;
+    --del-color: gray;
+}
+
+html {
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--main-color);
+}
+
+h1 {
+    font-family: 'Bitter', serif;
+    font-size: 60px;
+    text-align: center;
+    margin: 1ex 3vw 0.5ex;
+}
+
+#Dank {
+    font-family: 'Kalam', cursive;
+    font-style: normal;
+    color: var(--highlight-color);
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+h1 em {
+    font-family: 'Kalam', cursive;
+    text-decoration: underline;
+    font-style: normal;
+    color: var(--highlight-color);
+    text-decoration-color: var(--main-color);
+}
+
+main {
+    font-size: 24px;
+    line-height: 2;
+    letter-spacing: 1px;
+    padding: 0 10vw 20px;
+    max-width: 80em;
+}
+
+body {
+    margin: 0 auto;
+}
+
+article {
+    margin: 2ex 0;
+    padding: 0 3em 0;
+}
+
+article h3 {
+    font-family: 'Kalam', cursive;
+    margin: 0 -2em 0;
+    color: var(--highlight-color);
+}
+
+a {
+    color: var(--highlight-color);
+}
+
+del {
+    --highlight-color: var(--del-color);
+    color: var(--del-color);
+}
+
+.ribbon {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.mainribbon {
+    background-image: url("images/ribbon3.svg");
+    background-size: contain;
+    width: 14.144581999ex;
+    height: 6ex;
+}
+
+.leftribbon {
+    background-image: url("images/ribbon-plain.svg");
+    background-size: contain;
+    width: 10vw;
+    height: 6ex;
+    background-repeat: repeat-x;
+}
+
+.rightribbon {
+    flex: 1;
+    height: 6ex;
+    /* background-color: var(--highlight-color); */
+    background-image: url("images/ribbon-plain.svg");
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+
+footer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    text-align: center;
+}
