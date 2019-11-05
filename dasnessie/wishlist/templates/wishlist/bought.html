@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="de-DE">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Wunschzettel von Nessie - Einkauf">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'wishlist/images/icon.ico' %}">
+    <title>Vielen Dank!</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'wishlist/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Kalam|Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Vielen Dank!</h1>
+    </header>
+
+    <div class="ribbon">
+        <div class="leftribbon"></div>
+        <div class="mainribbon"></div>
+        <div class="rightribbon"></div>
+    </div>
+
+    <main>
+
+        <article>
+            <h3>Du hast folgendes als erledigt markiert: {{ wish.title_text }}</h3>
+            Wenn du dich anders entscheiden solltest, kannst du den Wunsch weiter unten auf dieser Seite wieder als offen markieren.
+            Du kannst ein Lesezeichen setzen oder dir diese URL speichern:
+            <a href="{% url 'bought' wish.unbuy_string %}"><span class="url">http://127.0.0.1:8000{% url 'bought' wish.unbuy_string %}</span></a>
+            <form action="{% url 'unbuy' wish.unbuy_string %}" method="post">
+                {% csrf_token %}
+                Und hier kannst du den Wunsch wieder als offen markieren:
+                <input type="submit" value="als offen markieren">
+            </form>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>dasNessie, <a href="https://github.com">Wishlist on Github</a></p>
+    </footer>
+</body>
+
+</html>

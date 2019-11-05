@@ -69,6 +69,10 @@ del {
     color: var(--del-color);
 }
 
+.url {
+    white-space: nowrap;
+}
+
 .ribbon {
     margin: 0;
     padding: 0;

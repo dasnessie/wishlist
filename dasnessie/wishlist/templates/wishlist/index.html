@@ -27,31 +27,31 @@
   <main>
 
 
-{% autoescape off %}
-{% if wish_list %}
+    {% autoescape off %}
+    {% if wish_list %}
     {% for wish in wish_list %}
-        <article>
-            {% if wish.bought %}
-                <del>
-            {% endif %}
-                <h3>{{ wish.title_text }}</h3>
-                    {{ wish.description_text }}
-            {% if wish.bought %}
-                </del>
-            {% else %}
-            <form action="{% url 'buy' wish.id %}" method="post">
-                {% csrf_token %}
-                <input type="submit" value="Gekauft!">
-            </form>
-            {% endif %}
-        </article>
+    <article>
+      {% if wish.bought %}
+      <del>
+        {% endif %}
+        <h3>{{ wish.title_text }}</h3>
+        {{ wish.description_text }}
+        {% if wish.bought %}
+      </del>
+      {% else %}
+      <form action="{% url 'buy' wish.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Das schenke ich!">
+      </form>
+      {% endif %}
+    </article>
     {% endfor %}
 
-      <p id="Dank">Vielen Dank!</p>
-{% else %}
+    <p id="Dank">Vielen Dank!</p>
+    {% else %}
     <p>Wunschlos glücklich!</p>
-{% endif %}
-{% endautoescape %}
+    {% endif %}
+    {% endautoescape %}
 
 
   </main>

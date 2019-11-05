@@ -1,6 +1,6 @@
 import random
 import string
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 
@@ -16,7 +16,7 @@ def index(request):
 
 def bought(request, secret):
     wish = get_object_or_404(Wish, unbuy_string=secret)
-    return HttpResponse("You bought %s" % wish.title_text)
+    return render(request, 'wishlist/bought.html', {'wish': wish})
 
 def buy(request, wish_id):
     wish = get_object_or_404(Wish, pk=wish_id)
@@ -24,8 +24,7 @@ def buy(request, wish_id):
     wish.unbuy_string = ''.join(random.choices(
         string.ascii_lowercase + string.digits, k=20))
     wish.save()
-    return HttpResponseRedirect('/wishlist')
-    # return HttpResponseRedirect(reverse('wishlist:bought', args=(wish.unbuy_string,)))
+    return HttpResponseRedirect(reverse('bought', args=(wish.unbuy_string,)))
 
 def unbuy(request, secret):
     wish = get_object_or_404(Wish, unbuy_string=secret)
