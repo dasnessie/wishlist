@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Open Sans', sans-serif;
     background-color: var(--background-color);
     color: var(--main-color);
@@ -14,7 +14,7 @@ html {
 
 h1 {
     font-family: 'Bitter', serif;
-    font-size: 60px;
+    font-size: 3rem;
     text-align: center;
     margin: 1ex 3vw 0.5ex;
 }
@@ -24,7 +24,7 @@ h1 {
     font-style: normal;
     color: var(--highlight-color);
     text-align: center;
-    font-size: 60px;
+    font-size: 2rem;
     margin-bottom: 0;
     font-weight: bold;
 }
@@ -38,7 +38,6 @@ h1 em {
 }
 
 main {
-    font-size: 24px;
     line-height: 2;
     letter-spacing: 1px;
     padding: 0 10vw 20px;
@@ -101,7 +100,6 @@ del {
 .rightribbon {
     flex: 1;
     height: 6ex;
-    /* background-color: var(--highlight-color); */
     background-image: url("images/ribbon-plain.svg");
     background-size: contain;
     background-repeat: repeat-x;
@@ -109,6 +107,19 @@ del {
 
 footer {
     font-family: 'Open Sans', sans-serif;
-    font-size: 10px;
+    font-size: .6rem;
     text-align: center;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 0 5vw 10px;
+    }
+    article {
+        padding: 0;
+    }
+    article h3 {
+        margin: 0;
+        font-size: 1.2rem;
+    }
 }
