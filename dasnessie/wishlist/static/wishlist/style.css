@@ -117,6 +117,7 @@ footer {
     }
     article {
         padding: 0;
+        hyphens: auto;
     }
     article h3 {
         margin: 0;
