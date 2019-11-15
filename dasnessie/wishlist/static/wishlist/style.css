@@ -74,7 +74,7 @@ del {
 }
 
 .url {
-    white-space: nowrap;
+    word-break: keep-all;
 }
 
 .ribbon {
@@ -124,5 +124,15 @@ footer {
     article h3 {
         margin: 0;
         font-size: 1.2rem;
+    }
+    .url {
+        word-break: break-word;
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .url {
+        word-break: break-all;
     }
 }
