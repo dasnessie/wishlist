@@ -113,3 +113,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+WISHLIST_URL = 'https://wunschzettel.dasnessie.de'
+WISHLIST_OWNER_S = 'Nessies'

@@ -6,18 +6,18 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Wunschzettel von Nessie">
+    <meta name="description" content="{{ titletext }} Wunschzettel">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'wishlist/images/icon.ico' %}">
-    <title>Nessies Wunschzettel</title>
+    <title>{{ titletext }} Wunschzettel</title>
     <link rel="stylesheet" type="text/css" href="{% static 'wishlist/style.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Bitter|Kalam|Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1><em>Nessies</em> Wunsch&shy;zettel</h1>
+        <h1><em>{{ titletext }}</em> Wunsch&shy;zettel</h1>
     </header>
 
     <div class="ribbon">

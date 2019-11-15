@@ -10,7 +10,7 @@
     markieren.
     Du kannst dafür ein Lesezeichen setzen oder dir diese URL speichern:
     <a href="{% url 'bought' wish.unbuy_string %}"><span
-            class="url">http://127.0.0.1:8000{% url 'bought' wish.unbuy_string %}</span></a></p>
+            class="url">{{ base_url }}{% url 'bought' wish.unbuy_string %}</span></a></p>
 <p>Wenn du die URL vergisst, kannst du den Wunsch nicht mehr als offen markieren.</p>
 <p>
     <form action="{% url 'unbuy' wish.unbuy_string %}" method="post">
