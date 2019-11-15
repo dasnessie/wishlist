@@ -1,51 +1,24 @@
-<!DOCTYPE html>
+{% extends "wishlist/base.html" %}
 
 {% load static %}
 
-<html lang="de-DE">
+{% block content %}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="Wunschzettel von Nessie - Einkauf">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'wishlist/images/icon.ico' %}">
-    <title>Vielen Dank!</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'wishlist/style.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Kalam|Open+Sans&display=swap" rel="stylesheet">
-</head>
 
-<body>
-    <header>
-        <h1>Vielen Dank!</h1>
-    </header>
+<h3>Du hast folgendes als erledigt markiert: {{ wish.title_text }}</h3>
+<p>Wenn du dich anders entscheiden solltest, kannst du den Wunsch weiter unten auf dieser Seite wieder als offen
+    markieren.
+    Du kannst dafür ein Lesezeichen setzen oder dir diese URL speichern:
+    <a href="{% url 'bought' wish.unbuy_string %}"><span
+            class="url">http://127.0.0.1:8000{% url 'bought' wish.unbuy_string %}</span></a></p>
+<p>Wenn du die URL vergisst, kannst du den Wunsch nicht mehr als offen markieren.</p>
+<p>
+    <form action="{% url 'unbuy' wish.unbuy_string %}" method="post">
+        {% csrf_token %}
+        Und hier kannst du den Wunsch wieder als offen markieren:
+        <input type="submit" value="als offen markieren">
+    </form>
+</p>
+<p><a href="{% url 'index' %}">zurück zum Wunschzettel</a></p>
 
-    <div class="ribbon">
-        <div class="leftribbon"></div>
-        <div class="mainribbon"></div>
-        <div class="rightribbon"></div>
-    </div>
-
-    <main>
-
-        
-            <h3>Du hast folgendes als erledigt markiert: {{ wish.title_text }}</h3>
-            <p>Wenn du dich anders entscheiden solltest, kannst du den Wunsch weiter unten auf dieser Seite wieder als offen markieren.
-            Du kannst dafür ein Lesezeichen setzen oder dir diese URL speichern:
-            <a href="{% url 'bought' wish.unbuy_string %}"><span class="url">http://127.0.0.1:8000{% url 'bought' wish.unbuy_string %}</span></a></p>
-            <p>Wenn du die URL vergisst, kannst du den Wunsch nicht mehr als offen markieren.</p>
-            <p><form action="{% url 'unbuy' wish.unbuy_string %}" method="post">
-                {% csrf_token %}
-                Und hier kannst du den Wunsch wieder als offen markieren:
-                <input type="submit" value="als offen markieren">
-            </form></p>
-            <p><a href="{% url 'index' %}">zurück zum Wunschzettel</a></p>
-        
-
-    </main>
-
-    <footer>
-        <p>dasNessie, <a href="https://github.com/dasnessie/wishlist/">Wishlist on Github</a></p>
-    </footer>
-</body>
-
-</html>
+{% endblock %}
