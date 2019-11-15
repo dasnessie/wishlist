@@ -19,11 +19,11 @@ These install instructions are for uberspace 7, using gunicorn.
         / apache```
 
 6. In your copy of this repo, edit `dasnessie/settings.py`:
-  1. Set `STATIC_ROOT` to the folder for static files you just created
-  2. Set `WISHLIST_URL` to the base url under which the site will run
-  3. Set `WISHLIST_OWNER_S` to the name that should set in the header
-  4. Set `ALLOWED_HOSTS` to include your host
-  5. Ensure that `DEBUG` is set to false
+    1. Set `STATIC_ROOT` to the folder for static files you just created
+    2. Set `WISHLIST_URL` to the base url under which the site will run
+    3. Set `WISHLIST_OWNER_S` to the name that should set in the header
+    4. Set `ALLOWED_HOSTS` to include your host
+    5. Ensure that `DEBUG` is set to false
 7. Run `python3 manage.py collectstatic` in the folder that contains `manage.py` to copy your static files to the folder you set
 8. Run `python manage.py migrate` in the folder that contains `manage.py` to set up the database
 9. Make a service: In `~/etc/services.d/`, make a file called something like `wishlist.ini` that contains the following:
@@ -36,9 +36,9 @@ These install instructions are for uberspace 7, using gunicorn.
         redirect_stderr=true
 
 10. Run the service:
-  1. Update the service list: `supervisorctl reread`
-  2. Start the deamon: `supervisorctl update`
-  3. Run the service: `supervisorctl start wishlist`
+    1. Update the service list: `supervisorctl reread`
+    2. Start the deamon: `supervisorctl update`
+    3. Run the service: `supervisorctl start wishlist`
 
 ## Update
 
