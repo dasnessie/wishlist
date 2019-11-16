@@ -114,6 +114,9 @@ footer {
 }
 
 @media (max-width: 1000px) {
+    h1 {
+        hyphens: auto;
+    }
     main {
         padding: 0 5vw 10px;
     }

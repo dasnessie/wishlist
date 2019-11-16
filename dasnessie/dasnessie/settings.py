@@ -116,3 +116,4 @@ STATIC_URL = '/static/'
 
 WISHLIST_URL = 'https://wunschzettel.dasnessie.de'
 WISHLIST_OWNER_S = 'Nessies'
+WISHLIST_TITLE = 'Wunschzettel'

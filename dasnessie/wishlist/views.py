@@ -12,7 +12,8 @@ def index(request):
     wish_list = Wish.objects.order_by('bought', '-importance')
     context = {
         'wish_list': wish_list,
-        'titletext': settings.WISHLIST_OWNER_S,
+        'ownertext': settings.WISHLIST_OWNER_S,
+        'titletext': settings.WISHLIST_TITLE,
     }
     return render(request, 'wishlist/index.html', context)
 
@@ -21,7 +22,8 @@ def bought(request, secret):
     wish = get_object_or_404(Wish, unbuy_string=secret)
     context = {
         'wish': wish,
-        'titletext': settings.WISHLIST_OWNER_S,
+        'ownertext': settings.WISHLIST_OWNER_S,
+        'titletext': settings.WISHLIST_TITLE,
         'base_url': settings.WISHLIST_URL,
     }
     return render(request, 'wishlist/bought.html', context)
