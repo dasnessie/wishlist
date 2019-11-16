@@ -21,7 +21,8 @@ These install instructions are for uberspace 7, using gunicorn.
 6. In your copy of this repo, edit `dasnessie/settings.py`:
     1. Set `STATIC_ROOT` to the folder for static files you just created
     2. Set `WISHLIST_URL` to the base url under which the site will run
-    3. Set `WISHLIST_OWNER_S` to the name that should set in the header
+    3. Set `WISHLIST_OWNER_S` to the name that should be set in the header
+    3. Set `WISHLIST_TITLE` to the title of the list, eg 'Wishlist'
     4. Set `ALLOWED_HOSTS` to include your host
     5. Ensure that `DEBUG` is set to false
 7. Run `python3 manage.py collectstatic` in the folder that contains `manage.py` to copy your static files to the folder you set
