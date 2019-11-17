@@ -16,7 +16,7 @@ These install instructions are for uberspace 7, using gunicorn.
         $ uberspace web backend list
         <subdomain>/static apache
         <subdomain>/ http:8000
-        / apache```
+        / apache
 
 6. In your copy of this repo, edit `dasnessie/settings.py`:
     1. Set `STATIC_ROOT` to the folder for static files you just created

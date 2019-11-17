@@ -1,3 +1,51 @@
+/* bitter-regular - latin */
+
+@font-face {
+    font-family: 'Bitter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/bitter/bitter-v15-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Bitter Regular'), local('Bitter-Regular'), url('fonts/bitter/bitter-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/bitter/bitter-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('fonts/bitter/bitter-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('fonts/bitter/bitter-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('fonts/bitter/bitter-v15-latin-regular.svg#Bitter') format('svg');
+    /* Legacy iOS */
+}
+
+/* kalam-regular - latin */
+
+@font-face {
+    font-family: 'Kalam';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/kalam/kalam-v10-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Kalam'), local('Kalam-Regular'), url('fonts/kalam/kalam-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/kalam/kalam-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('fonts/kalam/kalam-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('fonts/kalam/kalam-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('fonts/kalam/kalam-v10-latin-regular.svg#Kalam') format('svg');
+    /* Legacy iOS */
+}
+
+/* open-sans-regular - latin */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/opensans/open-sans-v17-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url('fonts/opensans/open-sans-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/opensans/open-sans-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('fonts/opensans/open-sans-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('fonts/opensans/open-sans-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('fonts/opensans/open-sans-v17-latin-regular.svg#OpenSans') format('svg');
+    /* Legacy iOS */
+}
+
 :root {
     --highlight-color: #1e1f63;
     --background-color: #cbc1ff;
