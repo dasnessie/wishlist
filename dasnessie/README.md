@@ -27,6 +27,7 @@ These install instructions are for uberspace 7, using gunicorn.
     5. Ensure that `DEBUG` is set to false
 7. Run `python3 manage.py collectstatic` in the folder that contains `manage.py` to copy your static files to the folder you set
 8. Run `python manage.py migrate` in the folder that contains `manage.py` to set up the database
+8. Run `python manage.py createsuperuser` to create a user for the admin interface. You can use that user account later to add items to the list.
 9. Make a service: In `~/etc/services.d/`, make a file called something like `wishlist.ini` that contains the following:
 
         [program:wishlist]
@@ -40,6 +41,7 @@ These install instructions are for uberspace 7, using gunicorn.
     1. Update the service list: `supervisorctl reread`
     2. Start the deamon: `supervisorctl update`
     3. Run the service: `supervisorctl start wishlist`
+11. Add items to you list: Go to the URL under which the site is running. Go to /admin from there, log in with the data from step 10 and start adding wishes
 
 ## Update
 
