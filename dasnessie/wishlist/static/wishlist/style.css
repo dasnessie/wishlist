@@ -106,6 +106,8 @@ article {
 h3 {
     font-family: 'Kalam', cursive;
     color: var(--highlight-color);
+    line-height: 1.2;
+    margin-bottom: 0;
 }
 
 article h3 {
