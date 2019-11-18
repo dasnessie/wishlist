@@ -161,19 +161,15 @@ input[type="submit"] {
 }
 
 .leftribbon {
-    background-image: url("images/ribbon-plain.svg");
-    background-size: contain;
+    background-color: var(--highlight-color);
     width: 10vw;
-    height: var(--ribbon-height);
-    background-repeat: repeat-x;
+    height: calc(var(--ribbon-height)*0.4);
 }
 
 .rightribbon {
+    background-color: var(--highlight-color);
     flex: 1;
-    height: var(--ribbon-height);
-    background-image: url("images/ribbon-plain.svg");
-    background-size: contain;
-    background-repeat: repeat-x;
+    height: calc(var(--ribbon-height)*0.4);
 }
 
 footer {
