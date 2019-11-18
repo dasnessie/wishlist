@@ -8,12 +8,16 @@ from django.conf import settings
 from wishlist.models import Wish
 
 
-def index(request):
-    wish_list = Wish.objects.order_by('bought', '-importance')
+def index(request, nospoiler=False):
+    if (nospoiler):
+        wish_list = Wish.objects.order_by('-importance')
+    else: 
+        wish_list = Wish.objects.order_by('bought', '-importance')
     context = {
         'wish_list': wish_list,
         'ownertext': settings.WISHLIST_OWNER_S,
         'titletext': settings.WISHLIST_TITLE,
+        'nospoiler': nospoiler,
     }
     return render(request, 'wishlist/index.html', context)
 

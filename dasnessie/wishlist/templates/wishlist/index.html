@@ -7,13 +7,13 @@
 {% if wish_list %}
 {% for wish in wish_list %}
 <article>
-  {% if wish.bought %}
+  {% if wish.bought and not nospoiler %}
   <del>
     {% endif %}
     <h3>{{ wish.title_text }}
-    {% if wish.bought %} (wird schon geschenkt){% endif %}</h3>
+    {% if wish.bought and not nospoiler %} (wird schon geschenkt){% endif %}</h3>
     <p>{{ wish.description_text }}</p>
-    {% if wish.bought %}
+    {% if wish.bought and not nospoiler %}
   </del>
   {% else %}
   <form action="{% url 'buy' wish.id %}" method="post">
