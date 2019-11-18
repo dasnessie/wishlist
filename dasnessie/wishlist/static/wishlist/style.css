@@ -54,7 +54,7 @@
 }
 
 html {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-family: 'Open Sans', sans-serif;
     background-color: var(--background-color);
     color: var(--main-color);
@@ -99,8 +99,8 @@ body {
 }
 
 article {
-    margin: 2ex 0;
-    padding: 0 3em 0;
+    margin: 3rem 0;
+    padding: 0 1.8rem 0;
 }
 
 h3 {
@@ -109,7 +109,12 @@ h3 {
 }
 
 article h3 {
-    margin: 0 -2em 0;
+    margin: 0 -1.8rem -0.3em;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0.3rem 0;
 }
 
 a {
@@ -121,6 +126,19 @@ del {
     color: var(--del-color);
 }
 
+input[type="submit"] {
+    -webkit-appearance: none;
+    padding: 0.25em 1em;
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--main-color);
+    background-color: hsla(0, 100%, 100%, 30%);
+    display: block;
+    margin: 0.25rem 0 0;
+    border: 1px solid var(--highlight-color);
+    border-radius: 0.5em;
+}
+
 .url {
     word-break: keep-all;
 }
@@ -130,26 +148,27 @@ del {
     padding: 0;
     display: flex;
     align-items: center;
+    --ribbon-height: 2rem;
 }
 
 .mainribbon {
     background-image: url("images/ribbon3.svg");
     background-size: contain;
-    width: 14.144581999ex;
-    height: 6ex;
+    height: var(--ribbon-height);
+    width: calc(var(--ribbon-height)*2.3574303331667);
 }
 
 .leftribbon {
     background-image: url("images/ribbon-plain.svg");
     background-size: contain;
     width: 10vw;
-    height: 6ex;
+    height: var(--ribbon-height);
     background-repeat: repeat-x;
 }
 
 .rightribbon {
     flex: 1;
-    height: 6ex;
+    height: var(--ribbon-height);
     background-image: url("images/ribbon-plain.svg");
     background-size: contain;
     background-repeat: repeat-x;
@@ -162,8 +181,12 @@ footer {
 }
 
 @media (max-width: 1000px) {
+    html {
+        font-size: 18px;
+    }
     h1 {
         hyphens: auto;
+        font-size: 2.5rem;
     }
     main {
         padding: 0 5vw 10px;
@@ -174,11 +197,15 @@ footer {
     }
     article h3 {
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     .url {
         word-break: break-word;
         display: block;
+    }
+    input[type="submit"] {
+        padding: 0.7em 1em;
+        font-size: 1rem;
     }
 }
 
