@@ -17,7 +17,7 @@
   {% else %}
   <form action="{% url 'buy' wish.id %}" method="post">
     {% csrf_token %}
-    <input type="submit" value="Das schenke ich!">
+    <input type="submit" value="Das schenke ich!" aria-label="Das schenke ich: {{ wish.title_text }}">
   </form>
   {% endif %}
 </article>
