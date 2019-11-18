@@ -10,7 +10,8 @@
   {% if wish.bought %}
   <del>
     {% endif %}
-    <h3>{{ wish.title_text }}</h3>
+    <h3>{{ wish.title_text }}
+    {% if wish.bought %} (wird schon geschenkt){% endif %}</h3>
     <p>{{ wish.description_text }}</p>
     {% if wish.bought %}
   </del>
