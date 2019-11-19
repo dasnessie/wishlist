@@ -11,7 +11,7 @@ from wishlist.models import Wish
 def index(request, nospoiler=False):
     if (nospoiler):
         wish_list = Wish.objects.order_by('-importance')
-    else: 
+    else:
         wish_list = Wish.objects.order_by('bought', '-importance')
     context = {
         'wish_list': wish_list,
@@ -35,11 +35,14 @@ def bought(request, secret):
 
 def buy(request, wish_id):
     wish = get_object_or_404(Wish, pk=wish_id)
-    wish.bought = True
-    wish.unbuy_string = ''.join(random.choices(
-        string.ascii_lowercase + string.digits, k=20))
-    wish.save()
-    return HttpResponseRedirect(reverse('bought', args=(wish.unbuy_string,)))
+    if not wish.bought:
+        wish.bought = True
+        wish.unbuy_string = ''.join(random.choices(
+            string.ascii_lowercase + string.digits, k=20))
+        wish.save()
+        return HttpResponseRedirect(reverse('bought', args=(wish.unbuy_string,)))
+    else:
+        return HttpResponseRedirect('/buyerror')
 
 
 def unbuy(request, secret):
@@ -48,3 +51,11 @@ def unbuy(request, secret):
     wish.unbuy_string = None
     wish.save()
     return HttpResponseRedirect('/')
+
+
+def buyerror(request):
+    context = {
+        'ownertext': settings.WISHLIST_OWNER_S,
+        'titletext': settings.WISHLIST_TITLE,
+    }
+    return render(request, 'wishlist/buyerror.html', context)
