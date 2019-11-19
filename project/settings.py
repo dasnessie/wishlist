@@ -115,6 +115,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = config('STATIC_ROOT', default='')
+
 WISHLIST_URL = config('WISHLIST_URL')
 WISHLIST_OWNER_S = config('WISHLIST_OWNER_S')
 WISHLIST_TITLE = config('WISHLIST_TITLE')
