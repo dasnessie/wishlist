@@ -31,7 +31,7 @@ These install instructions are for uberspace 7, using gunicorn.
     8. The file should now look like this:
 
             SECRET_KEY = '012lhdwi8az1#%$eygb-%9z^x3r)i-24$51mh(i$-_!^+4yq3f'
-            STATIC_ROOT = `/var/www/virtual/dasnessie/wunschzettel.dasnessie.de/static`
+            STATIC_ROOT = '/var/www/virtual/dasnessie/wunschzettel.dasnessie.de/static'
             ALLOWED_HOSTS = 'https://wunschzettel.dasnessie.de'
             WISHLIST_URL = 'https://wunschzettel.dasnessie.de'
             WISHLIST_OWNER_S = 'Nessies'
