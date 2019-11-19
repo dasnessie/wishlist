@@ -45,8 +45,8 @@ These install instructions are for uberspace 7, using gunicorn.
 9. Make a service: In `~/etc/services.d/`, make a file called something like `wishlist.ini` that contains the following:
 
         [program:wishlist]
-        command=gunicorn -b '0.0.0.0:8000' dasnessie.wsgi
-        directory=<path to repo>/dasnessie/
+        command=gunicorn -b '0.0.0.0:8000' project.wsgi
+        directory=<path to repo>/
         autostart=true
         autorestart=true
         redirect_stderr=true
