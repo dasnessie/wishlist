@@ -47,8 +47,9 @@
 }
 
 :root {
-    --highlight-color: #1e1f63;
-    --background-color: #cbc1ff;
+    --highlight-color: hsla(239, 53%, 25%, 100%);
+    --background-color: hsla(239, 53%, 85%, 100%);
+    /* --background-color: #cbc1ff; */
     --main-color: black;
     --del-color: gray;
 }
