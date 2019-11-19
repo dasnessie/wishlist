@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19 21:48+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: wishlist/templates/wishlist/base.html:6
+msgid "de-DE"
+msgstr "en-US"
+
+#: wishlist/templates/wishlist/base.html:10
+#: wishlist/templates/wishlist/base.html:14
+#, python-format
+msgid "%(ownertext)s %(titletext)s"
+msgstr "%(ownertext)s %(titletext)s"
+
+#: wishlist/templates/wishlist/base.html:22
+#, python-format
+msgid "<em>%(ownertext)s</em> %(titletext)s"
+msgstr "<em>%(ownertext)s</em> %(titletext)s"
+
+#: wishlist/templates/wishlist/base.html:40
+msgid "Wishlist auf Github"
+msgstr "Wishlist on Github"
+
+#: wishlist/templates/wishlist/bought.html:9
+msgid "Du hast folgendes als erledigt markiert:"
+msgstr "You have marked as done:"
+
+#: wishlist/templates/wishlist/bought.html:10
+msgid ""
+"Wenn du dich anders entscheiden solltest, \n"
+"    kannst du den Wunsch weiter unten auf dieser Seite wieder als offen "
+"markieren.\n"
+"    Du kannst dafür ein Lesezeichen setzen oder dir diese URL speichern:"
+msgstr "On the bottom of this page, you can mark this wish as pending if you change your mind. "
+"For that, you can bookmark this page or save the following URL:"
+
+#: wishlist/templates/wishlist/bought.html:15
+msgid ""
+"Wenn du die URL vergisst, kannst du den Wunsch nicht mehr als offen "
+"markieren."
+msgstr "You can no longer mark this wish as pending if you forget the URL."
+
+#: wishlist/templates/wishlist/bought.html:19
+msgid "Und hier kannst du den Wunsch wieder als offen markieren:"
+msgstr "Press this button to mark the wish as pending again:"
+
+#: wishlist/templates/wishlist/bought.html:20
+msgid "als offen markieren"
+msgstr "mark as pending"
+
+#: wishlist/templates/wishlist/bought.html:23
+#: wishlist/templates/wishlist/buyerror.html:14
+msgid "zurück zum Wunschzettel"
+msgstr "back to the list"
+
+#: wishlist/templates/wishlist/buyerror.html:9
+msgid "Oh nein, etwas ist schiefgegangen!"
+msgstr "Oh no, something went wrong!"
+
+#: wishlist/templates/wishlist/buyerror.html:10
+msgid ""
+"Du hast versucht, einen Wunsch als erledigt zu markieren, der schon als "
+"erledigt markiert war. \n"
+"Möglicherweise hat ihn jemand als erledigt markiert, während du schon auf "
+"der Wunschzettelseite warst.\n"
+"Bitte geh zurück zum Wunschzettel und such dir etwas anderes aus!"
+msgstr "You tried to mark a wish that was already done as done. "
+"Maybe someone marked it as done while you were already on the page. "
+"Please go back and choose something else!"
+
+#: wishlist/templates/wishlist/index.html:15
+msgid "wird schon geschenkt"
+msgstr "someone said they want to gift this"
+
+#: wishlist/templates/wishlist/index.html:22
+msgid "Das schenke ich!"
+msgstr "I will gift this!"
+
+#: wishlist/templates/wishlist/index.html:22
+msgid "Das schenke ich:"
+msgstr "I will gift this:"
+
+#: wishlist/templates/wishlist/index.html:28
+msgid "Vielen Dank!"
+msgstr "Thanks a lot!"

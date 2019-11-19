@@ -1,24 +1,25 @@
 {% extends "wishlist/base.html" %}
 
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
 
-<h3>Du hast folgendes als erledigt markiert: {{ wish.title_text }}</h3>
-<p>Wenn du dich anders entscheiden solltest, kannst du den Wunsch weiter unten auf dieser Seite wieder als offen
-    markieren.
-    Du kannst dafür ein Lesezeichen setzen oder dir diese URL speichern:
+<h3>{% trans "Du hast folgendes als erledigt markiert:" %} {{ wish.title_text }}</h3>
+<p>{% blocktrans %}Wenn du dich anders entscheiden solltest, 
+    kannst du den Wunsch weiter unten auf dieser Seite wieder als offen markieren.
+    Du kannst dafür ein Lesezeichen setzen oder dir diese URL speichern:{% endblocktrans %}
     <a href="{% url 'bought' wish.unbuy_string %}"><span
             class="url">{{ base_url }}{% url 'bought' wish.unbuy_string %}</span></a></p>
-<p>Wenn du die URL vergisst, kannst du den Wunsch nicht mehr als offen markieren.</p>
+<p>{% trans "Wenn du die URL vergisst, kannst du den Wunsch nicht mehr als offen markieren." %}</p>
 <p>
     <form action="{% url 'unbuy' wish.unbuy_string %}" method="post">
         {% csrf_token %}
-        Und hier kannst du den Wunsch wieder als offen markieren:
-        <input type="submit" value="als offen markieren">
+        {% trans "Und hier kannst du den Wunsch wieder als offen markieren:" %}
+        <input type="submit" value="{% trans "als offen markieren" %}">
     </form>
 </p>
-<p><a href="{% url 'index' %}">zurück zum Wunschzettel</a></p>
+<p><a href="{% url 'index' %}">{% trans "zurück zum Wunschzettel" %}</a></p>
 
 {% endblock %}

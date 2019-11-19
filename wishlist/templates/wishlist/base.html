@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 
 {% load static %}
+{% load i18n %}
 
-<html lang="de-DE">
+<html lang="{% trans "de-DE" %}">
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="{{ ownertext }} {{ titletext }}">
+    <meta name="description" content="{% blocktrans %}{{ ownertext }} {{ titletext }}{% endblocktrans %}">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'wishlist/images/icon.ico' %}">
-    <title>{{ ownertext }} {{ titletext }}</title>
+    <title>{% blocktrans %}{{ ownertext }} {{ titletext }}{% endblocktrans %}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'wishlist/style.css' %}">
     {% comment %} <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> {% endcomment %}
 </head>
 
 <body>
     <header>
-        <h1><span role="text"><em>{{ ownertext }}</em> {{ titletext }}</span></h1>
+        <h1><span role="text">{% blocktrans %}<em>{{ ownertext }}</em> {{ titletext }}{% endblocktrans %}</span></h1>
     </header>
 
     <div class="ribbon">
@@ -35,7 +36,7 @@
     </main>
 
     <footer>
-        <p>dasNessie, <a href="https://github.com/dasnessie/wishlist/">Wishlist on Github</a></p>
+        <p>dasNessie, <a href="https://github.com/dasnessie/wishlist/">{% trans "Wishlist auf Github" %}</a></p>
     </footer>
 </body>
 

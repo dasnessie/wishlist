@@ -99,8 +99,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
+LOCALE_PATHS = ['wishlist/locale']
 
-LANGUAGE_CODE = 'de-de'
+LANGUAGE_CODE = config('LANGUAGE_CODE', default='de')
+#LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'Europe/Berlin'
 

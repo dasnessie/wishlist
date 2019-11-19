@@ -1,6 +1,7 @@
 {% extends "wishlist/base.html" %}
 
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 {% autoescape off %}
@@ -11,22 +12,22 @@
   <del>
     {% endif %}
     <h3>{{ wish.title_text }}
-    {% if wish.bought and not nospoiler %} (wird schon geschenkt){% endif %}</h3>
+    {% if wish.bought and not nospoiler %} ({% trans "wird schon geschenkt" %}){% endif %}</h3>
     <p>{{ wish.description_text }}</p>
     {% if wish.bought and not nospoiler %}
   </del>
   {% else %}
   <form action="{% url 'buy' wish.id %}" method="post">
     {% csrf_token %}
-    <input type="submit" value="Das schenke ich!" aria-label="Das schenke ich: {{ wish.title_text }}">
+    <input type="submit" value="{% trans "Das schenke ich!" %}" aria-label="{% trans "Das schenke ich:" %} {{ wish.title_text }}">
   </form>
   {% endif %}
 </article>
 {% endfor %}
 
-<p id="Dank">Vielen Dank!</p>
+<p id="Dank">{% trans "Vielen Dank!" %}</p>
 {% else %}
-<p>Wunschlos glücklich!</p>
+<p>{% trans "Wunschlos glücklich!" &}</p>
 {% endif %}
 {% endautoescape %}
 {% endblock %}

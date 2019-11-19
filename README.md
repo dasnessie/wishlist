@@ -27,18 +27,21 @@ These install instructions are for uberspace 7, using gunicorn.
     4. Set `WISHLIST_URL` to the base url under which the site will run
     5. Set `WISHLIST_OWNER_S` to the name that should be set in the header
     6. Set `WISHLIST_TITLE` to the title of the list, eg 'Wishlist'
-    7. The file should now look like this:
+    7. SET `LANGUAGE_CODE` to the language your installation should have. If you don't set this, it will default to German
+    8. The file should now look like this:
 
-        SECRET_KEY = '012lhdwi8az1#%$eygb-%9z^x3r)i-24$51mh(i$-_!^+4yq3f'
-        STATIC_ROOT = `/var/www/virtual/dasnessie/wunschzettel.dasnessie.de/static`
-        ALLOWED_HOSTS = 'https://wunschzettel.dasnessie.de'
-        WISHLIST_URL = 'https://wunschzettel.dasnessie.de'
-        WISHLIST_OWNER_S = 'Nessies'
-        WISHLIST_TITLE = 'Wunschzettel'
+            SECRET_KEY = '012lhdwi8az1#%$eygb-%9z^x3r)i-24$51mh(i$-_!^+4yq3f'
+            STATIC_ROOT = `/var/www/virtual/dasnessie/wunschzettel.dasnessie.de/static`
+            ALLOWED_HOSTS = 'https://wunschzettel.dasnessie.de'
+            WISHLIST_URL = 'https://wunschzettel.dasnessie.de'
+            WISHLIST_OWNER_S = 'Nessies'
+            WISHLIST_TITLE = 'Wunschzettel'
+            LANGUAGE_CODE = 'de'
 
 7. Run `python3 manage.py collectstatic` in the folder that contains `manage.py` to copy your static files to the folder you set
 8. Run `python manage.py migrate` in the folder that contains `manage.py` to set up the database
 8. Run `python manage.py createsuperuser` to create a user for the admin interface. You can use that user account later to add items to the list.
+8. Run `python manage.py compilemessages` to generate the language files.
 9. Make a service: In `~/etc/services.d/`, make a file called something like `wishlist.ini` that contains the following:
 
         [program:wishlist]

@@ -1,15 +1,16 @@
 {% extends "wishlist/base.html" %}
 
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
 
-<h3>Oh nein, etwas ist schiefgegangen!</h3>
-<p>Du hast versucht, einen Wunsch als erledigt zu markieren, der schon als erledigt markiert war. 
+<h3>{% trans "Oh nein, etwas ist schiefgegangen!" %}</h3>
+<p>{% blocktrans %}Du hast versucht, einen Wunsch als erledigt zu markieren, der schon als erledigt markiert war. 
 Möglicherweise hat ihn jemand als erledigt markiert, während du schon auf der Wunschzettelseite warst.
-Bitte geh zurück zum Wunschzettel und such dir etwas anderes aus!
+Bitte geh zurück zum Wunschzettel und such dir etwas anderes aus!{% endblocktrans %}
 </p>
-<p><a href="{% url 'index' %}">zurück zum Wunschzettel</a></p>
+<p><a href="{% url 'index' %}">{% trans "zurück zum Wunschzettel" %}</a></p>
 
 {% endblock %}
