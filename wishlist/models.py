@@ -1,10 +1,11 @@
-"""Blub"""
+"""
+The models used for defining objects
+"""
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 
 
 class Wish(models.Model):
-    """Blip"""
     title_text = models.CharField(max_length=200)
     description_text = models.TextField()
     importance = models.IntegerField(

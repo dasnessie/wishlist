@@ -1,3 +1,6 @@
+"""
+defines the urls to serve
+"""
 from django.urls import path
 
 from . import views

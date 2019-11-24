@@ -1,3 +1,6 @@
+"""
+defines the methods for reacting to the defined urls
+"""
 import random
 import string
 from django.http import HttpResponseRedirect
