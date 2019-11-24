@@ -12,4 +12,5 @@ urlpatterns = [
     path('unbuy/<str:secret>', views.unbuy, name='unbuy'),
     path('nospoiler', views.index, {'nospoiler': True}, name='nospoiler'),
     path('buyerror', views.buyerror, name='buyerror'),
+    path('stats', views.stats, name='stats'),
 ]

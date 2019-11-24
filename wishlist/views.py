@@ -62,3 +62,12 @@ def buyerror(request):
         'titletext': settings.WISHLIST_TITLE,
     }
     return render(request, 'wishlist/buyerror.html', context)
+
+def stats(request):
+    context = {
+        'ownertext': settings.WISHLIST_OWNER_S,
+        'titletext': settings.WISHLIST_TITLE,
+        'nr_done': Wish.objects.filter(bought=True).count(),
+        'nr_total': Wish.objects.count(),
+    }
+    return render(request, 'wishlist/stats.html', context)

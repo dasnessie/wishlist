@@ -66,6 +66,7 @@ For updating, do the following:
 1. Run `git pull` to get the latest version
 2. Run `python3 manage.py collectstatic` in the folder that contains `manage.py` to copy your static files to the folder you set
 3. Run `python manage.py migrate` in the folder that contains `manage.py` to set up the database
+4. Run `python manage.py compilemessages` to update the language files
 4. Restart the service: `supervisorctl restart wishlist`
 
 ## License

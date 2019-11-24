@@ -1,0 +1,13 @@
+{% extends "wishlist/base.html" %}
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+
+<h3>{% trans "Statistiken" %}</h3>
+<p>{% blocktrans %}Erledigte Wünsche: {{ nr_done }}/{{ nr_total }}{% endblocktrans %}
+</p>
+
+{% endblock %}

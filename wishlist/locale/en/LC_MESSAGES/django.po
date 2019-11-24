@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-19 22:38+0100\n"
+"POT-Creation-Date: 2019-11-24 16:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,3 +105,12 @@ msgstr "Thanks a lot!"
 #: wishlist/templates/wishlist/index.html:30
 msgid "Wunschlos glücklich!"
 msgstr "I don't need anything right now!"
+
+#: wishlist/templates/wishlist/stats.html:9
+msgid "Statistiken"
+msgstr "Statistics"
+
+#: wishlist/templates/wishlist/stats.html:10
+#, python-format
+msgid "Erledigte Wünsche: %(nr_done)s/%(nr_total)s"
+msgstr "Wishes marked as done: %(nr_done)s/%(nr_total)s"
