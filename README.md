@@ -39,9 +39,9 @@ These install instructions are for uberspace 7, using gunicorn.
             LANGUAGE_CODE = 'de'
 
 7. Run `python3 manage.py collectstatic` in the folder that contains `manage.py` to copy your static files to the folder you set
-8. Run `python manage.py migrate` in the folder that contains `manage.py` to set up the database
-8. Run `python manage.py createsuperuser` to create a user for the admin interface. You can use that user account later to add items to the list.
-8. Run `python manage.py compilemessages` to generate the language files.
+8. Run `python3 manage.py migrate` in the folder that contains `manage.py` to set up the database
+8. Run `python3 manage.py createsuperuser` to create a user for the admin interface. You can use that user account later to add items to the list.
+8. Run `python3 manage.py compilemessages` to generate the language files.
 9. Make a service: In `~/etc/services.d/`, make a file called something like `wishlist.ini` that contains the following:
 
         [program:wishlist]
@@ -65,8 +65,8 @@ For updating, do the following:
 
 1. Run `git pull` to get the latest version
 2. Run `python3 manage.py collectstatic` in the folder that contains `manage.py` to copy your static files to the folder you set
-3. Run `python manage.py migrate` in the folder that contains `manage.py` to set up the database
-4. Run `python manage.py compilemessages` to update the language files
+3. Run `python3 manage.py migrate` in the folder that contains `manage.py` to set up the database
+4. Run `python3 manage.py compilemessages` to update the language files
 4. Restart the service: `supervisorctl restart wishlist`
 
 ## License
