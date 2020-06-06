@@ -1,2 +1,2 @@
-Django==2.2.9
+Django==2.2.13
 python-decouple==3.3
