@@ -17,10 +17,11 @@
     {% if wish.bought and not nospoiler %}
   </del>
   {% else %}
-  <form action="{% url 'buy' wish.id %}" method="post">
+  {% comment %} <form action="{% url 'nick_entry' wish.id %}" method="post">
     {% csrf_token %}
     <input type="submit" value="{% trans "Das schenke ich!" %}" aria-label="{% trans "Das schenke ich:" %} {{ wish.title_text }}">
-  </form>
+  </form> {% endcomment %}
+  <a class="buy-button" href="{% url 'nick_entry' wish.id %}" aria-label="{% trans "Das schenke ich:" %} {{ wish.title_text }}">{% trans "Das schenke ich!" %}</a>
   {% endif %}
 </article>
 {% endfor %}

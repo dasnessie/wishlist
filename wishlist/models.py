@@ -12,6 +12,7 @@ class Wish(models.Model):
         default=3, validators=[MinValueValidator(1), MaxValueValidator(5)])
     bought = models.BooleanField(default=False)
     unbuy_string = models.CharField(max_length=20, unique=True, blank=True, null=True)
+    santa_nick = models.CharField(max_length=200, default="", blank=True)
 
     def __str__(self):
         return self.title_text

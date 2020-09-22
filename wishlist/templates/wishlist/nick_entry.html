@@ -1,0 +1,27 @@
+{% extends "wishlist/base.html" %}
+
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+
+<h3>{% trans "Du möchtest folgendes als erledigt markieren:" %} {{ wish.title_text }}</h3>
+<p>{% trans "Bitte verrate mir noch deinen (Nick-) Namen. Ich werde ihn mir nur anschauen, wenn etwas schief läuft."%}</p>
+<p>
+  <form action="{% url 'buy' wish.id %}" method="post">
+
+        {% csrf_token %}
+
+        <label for="name">{% trans "Name:" %}</label>
+        <input type="text" id="name" name="user_nickname" placeholder="Nickname" autofocus="True" required>
+
+        {{ form }}
+
+        <input type="submit" value="{% trans "Wunsch als erledigt markieren" %}" aria-label="{% trans "Folgendes als erledigt markieren:" %} {{ wish.title_text }}">
+
+  </form>
+</p>
+<p><a href="{% url 'index' %}">{% trans "zurück zum Wunschzettel" %}</a></p>
+
+{% endblock %}
