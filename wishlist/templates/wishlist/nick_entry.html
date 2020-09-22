@@ -17,8 +17,13 @@
         <input type="text" id="name" name="user_nickname" placeholder="Nickname" autofocus="True" required>
 
         {{ form }}
+        
+        <p>
+          <input type="submit" value="{% trans "Wunsch als erledigt markieren" %}" aria-label="{% trans "Folgendes als erledigt markieren:" %} {{ wish.title_text }}">
 
-        <input type="submit" value="{% trans "Wunsch als erledigt markieren" %}" aria-label="{% trans "Folgendes als erledigt markieren:" %} {{ wish.title_text }}">
+          {% comment %} TESTING PURPOSES ONLY {% endcomment %}
+          <a class="buy-button" href="#" aria-label="{% trans "Wunsch als erledigt markieren" %} {{ wish.title_text }}">{% trans "Wunsch als erledigt markieren" %}</a>
+        </p>
 
   </form>
 </p>
