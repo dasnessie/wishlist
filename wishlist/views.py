@@ -3,7 +3,7 @@ defines the methods for reacting to the defined urls
 """
 import random
 import string
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponseBadRequest
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.conf import settings
@@ -39,6 +39,9 @@ def bought(request, secret):
 
 
 def buy(request, wish_id):
+    # TODO: Check if usernick valid
+    if request.POST['user_nickname'].strip()=="":
+        return HttpResponseBadRequest()
     wish = get_object_or_404(Wish, pk=wish_id)
     if not wish.bought:
         wish.bought = True
