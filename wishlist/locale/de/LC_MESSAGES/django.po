@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-24 16:02+0100\n"
+"POT-Creation-Date: 2020-09-25 23:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,12 +65,13 @@ msgstr ""
 msgid "Und hier kannst du den Wunsch wieder als offen markieren:"
 msgstr "Und hier kannst du den Wunsch wieder als offen markieren:"
 
-#: wishlist/templates/wishlist/bought.html:20
+#: wishlist/templates/wishlist/bought.html:21
 msgid "als offen markieren"
 msgstr "als offen markieren"
 
-#: wishlist/templates/wishlist/bought.html:23
+#: wishlist/templates/wishlist/bought.html:25
 #: wishlist/templates/wishlist/buyerror.html:14
+#: wishlist/templates/wishlist/nick_entry.html:27
 msgid "zurück zum Wunschzettel"
 msgstr "zurück zum Wunschzettel"
 
@@ -96,21 +97,47 @@ msgstr ""
 msgid "wird schon geschenkt"
 msgstr "wird schon geschenkt"
 
-#: wishlist/templates/wishlist/index.html:22
-msgid "Das schenke ich!"
-msgstr "Das schenke ich!"
-
-#: wishlist/templates/wishlist/index.html:22
+#: wishlist/templates/wishlist/index.html:25
 msgid "Das schenke ich:"
 msgstr "Das schenke ich:"
 
-#: wishlist/templates/wishlist/index.html:28
+#: wishlist/templates/wishlist/index.html:25
+msgid "Das schenke ich!"
+msgstr "Das schenke ich!"
+
+#: wishlist/templates/wishlist/index.html:30
 msgid "Vielen Dank!"
 msgstr "Vielen Dank!"
 
-#: wishlist/templates/wishlist/index.html:30
+#: wishlist/templates/wishlist/index.html:32
 msgid "Wunschlos glücklich!"
 msgstr "Wunschlos glücklich!"
+
+#: wishlist/templates/wishlist/nick_entry.html:9
+#| msgid "Du hast folgendes als erledigt markiert:"
+msgid "Du möchtest folgendes als erledigt markieren:"
+msgstr "Du möchtest folgendes als erledigt markieren:"
+
+#: wishlist/templates/wishlist/nick_entry.html:10
+msgid ""
+"Bitte verrate mir noch deinen (Nick-) Namen. Ich werde ihn mir nur "
+"anschauen, wenn etwas schief läuft."
+msgstr "Bitte verrate mir noch deinen (Nick-) Namen. Ich werde ihn mir nur "
+"anschauen, wenn etwas schief läuft."
+
+#: wishlist/templates/wishlist/nick_entry.html:16
+msgid "Name:"
+msgstr "Name:"
+
+#: wishlist/templates/wishlist/nick_entry.html:22
+#| msgid "Du hast folgendes als erledigt markiert:"
+msgid "Wunsch als erledigt markieren"
+msgstr "Wunsch als erledigt markieren"
+
+#: wishlist/templates/wishlist/nick_entry.html:22
+#| msgid "Du hast folgendes als erledigt markiert:"
+msgid "Folgendes als erledigt markieren:"
+msgstr "Folgendes als erledigt markieren:"
 
 #: wishlist/templates/wishlist/stats.html:9
 msgid "Statistiken"
