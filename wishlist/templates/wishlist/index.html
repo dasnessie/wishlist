@@ -11,9 +11,16 @@
   {% if wish.bought and not nospoiler %}
   <del>
     {% endif %}
-    <h3>{{ wish.title_text }}
-    {% if wish.bought and not nospoiler %} ({% trans "wird schon geschenkt" %}){% endif %}</h3>
+    <h3>
+      {% if wish.link %}<a href="{{ wish.link }}" target="_blank">{% endif %}
+      {{ wish.title_text }}
+      {% if wish.bought and not nospoiler %} ({% trans "wird schon geschenkt" %}){% endif %}
+      {% if wish.link %}</a>{% endif %}
+    </h3>
     <p>{{ wish.description_text }}</p>
+    {% if wish.link %}
+    <p><a href="{{ wish.link }}" target="_blank">{% trans "Webseite besuchen" %}</a></p>
+    {% endif %}
     {% if wish.bought and not nospoiler %}
   </del>
   {% else %}
@@ -21,7 +28,7 @@
     {% csrf_token %}
     <input type="submit" value="{% trans "Das schenke ich!" %}" aria-label="{% trans "Das schenke ich:" %} {{ wish.title_text }}">
   </form> {% endcomment %}
-  <a class="buy-button" href="{% url 'nick_entry' wish.id %}" aria-label="{% trans "Das schenke ich:" %} {{ wish.title_text }}">{% trans "Das schenke ich!" %}</a>
+  <a class="wish-button" href="{% url 'nick_entry' wish.id %}" aria-label="{% trans "Das schenke ich:" %} {{ wish.title_text }}">{% trans "Das schenke ich!" %}</a>
   {% endif %}
 </article>
 {% endfor %}
