@@ -129,7 +129,7 @@ del {
     color: var(--del-color);
 }
 
-input[type="submit"], .buy-button {
+input[type="submit"], .wish-button {
     -webkit-appearance: none;
     padding: 0.25em 1em;
     font: inherit;
@@ -222,7 +222,7 @@ footer {
         word-break: break-word;
         display: block;
     }
-    input[type="submit"], .buy-button {
+    input[type="submit"], .wish-button {
         padding: 0.5em 1em;
         font-size: 1rem;
     }

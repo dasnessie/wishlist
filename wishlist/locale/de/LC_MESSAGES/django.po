@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-25 23:11+0200\n"
+"POT-Creation-Date: 2021-11-14 23:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,28 +93,31 @@ msgstr ""
 "der Wunschzettelseite warst.\n"
 "Bitte geh zurück zum Wunschzettel und such dir etwas anderes aus!"
 
-#: wishlist/templates/wishlist/index.html:15
+#: wishlist/templates/wishlist/index.html:17
 msgid "wird schon geschenkt"
 msgstr "wird schon geschenkt"
 
-#: wishlist/templates/wishlist/index.html:25
+#: wishlist/templates/wishlist/index.html:22
+msgid "Webseite besuchen"
+msgstr "Webseite besuchen"
+
+#: wishlist/templates/wishlist/index.html:32
 msgid "Das schenke ich:"
 msgstr "Das schenke ich:"
 
-#: wishlist/templates/wishlist/index.html:25
+#: wishlist/templates/wishlist/index.html:32
 msgid "Das schenke ich!"
 msgstr "Das schenke ich!"
 
-#: wishlist/templates/wishlist/index.html:30
+#: wishlist/templates/wishlist/index.html:37
 msgid "Vielen Dank!"
 msgstr "Vielen Dank!"
 
-#: wishlist/templates/wishlist/index.html:32
+#: wishlist/templates/wishlist/index.html:39
 msgid "Wunschlos glücklich!"
 msgstr "Wunschlos glücklich!"
 
 #: wishlist/templates/wishlist/nick_entry.html:9
-#| msgid "Du hast folgendes als erledigt markiert:"
 msgid "Du möchtest folgendes als erledigt markieren:"
 msgstr "Du möchtest folgendes als erledigt markieren:"
 
@@ -122,7 +125,8 @@ msgstr "Du möchtest folgendes als erledigt markieren:"
 msgid ""
 "Bitte verrate mir noch deinen (Nick-) Namen. Ich werde ihn mir nur "
 "anschauen, wenn etwas schief läuft."
-msgstr "Bitte verrate mir noch deinen (Nick-) Namen. Ich werde ihn mir nur "
+msgstr ""
+"Bitte verrate mir noch deinen (Nick-) Namen. Ich werde ihn mir nur "
 "anschauen, wenn etwas schief läuft."
 
 #: wishlist/templates/wishlist/nick_entry.html:16
@@ -130,12 +134,10 @@ msgid "Name:"
 msgstr "Name:"
 
 #: wishlist/templates/wishlist/nick_entry.html:22
-#| msgid "Du hast folgendes als erledigt markiert:"
 msgid "Wunsch als erledigt markieren"
 msgstr "Wunsch als erledigt markieren"
 
 #: wishlist/templates/wishlist/nick_entry.html:22
-#| msgid "Du hast folgendes als erledigt markiert:"
 msgid "Folgendes als erledigt markieren:"
 msgstr "Folgendes als erledigt markieren:"
 
