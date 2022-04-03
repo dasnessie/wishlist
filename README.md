@@ -9,8 +9,8 @@ Copyright (C) 2019  dasNessie
 These install instructions are for uberspace 7, using gunicorn.
 
 1. Clone this repo onto your server
-2. Install the dependencies for python 3: `pip3.6 install -r requirements.txt`
-2. Install gunicorn for python 3: `pip3.6 install gunicorn`
+2. Install the dependencies for python 3: `pip3.6 install -r requirements.txt --user`
+2. Install gunicorn for python 3: `pip3.6 install gunicorn --user`
 3. Make a subdomain folder, eg somewhere in `/var/www/virtual/<username>/<subdomain>`
 4. Make a folder for static files somwhere in that folder, eg `/var/www/virtual/<username>/<subdomain>/static`
 5. Set your [web backends](https://manual.uberspace.de/web-backends.html) using the `uberspace web backend` utility. The subdomain needs to be set to a port on which gunicorn will later listen (such as `8000`), the static files need to be served by apache. Example: 
@@ -32,7 +32,7 @@ These install instructions are for uberspace 7, using gunicorn.
 
             SECRET_KEY = '012lhdwi8az1#%$eygb-%9z^x3r)i-24$51mh(i$-_!^+4yq3f'
             STATIC_ROOT = '/var/www/virtual/dasnessie/wunschzettel.dasnessie.de/static'
-            ALLOWED_HOSTS = 'https://wunschzettel.dasnessie.de'
+            ALLOWED_HOSTS = 'wunschzettel.dasnessie.de'
             WISHLIST_URL = 'https://wunschzettel.dasnessie.de'
             WISHLIST_OWNER_S = 'Nessies'
             WISHLIST_TITLE = 'Wunschzettel'
